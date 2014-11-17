@@ -77,4 +77,4 @@ You can contact me with any ideas or suggestions you have here. Also, like any o
 This is a personal project, which is licensed under the [GNU v2] license. Feel free to use it however you like, and you don't need to credit me if you don't want to! But you can say thanks, buy me [Nespresso Capsules] :)
 
 [GNU v2]:http://www.gnu.org/licenses/gpl-2.0.html
-[Nespresso Capsules]:http://yusrimathews.co.za/donate/
+[Nespresso Capsules]:http://yusrimathews.co.za/donate/?project=wordpress-installer
