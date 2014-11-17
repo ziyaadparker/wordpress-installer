@@ -19,7 +19,7 @@ You now do this from once screen, and you're redirected to the actual installati
 
 # Getting Started
 
-It's pretty simple.
+PHP verion 5.3 or greater is required, other than that it's pretty simple.
 
 #### Installation
 
@@ -32,9 +32,9 @@ It's pretty simple.
     - ```http://localhost:8888/wordpress-installer```
     - ```http://localhost:8080/wordpress-installer```
 
-#### Setup Wizard
+# Usage
 
-This is really self explanatory:
+You should be fine just filling out the form, however just in case you need an indepth explanation, here it is:
 
   - **Installation type:**
   
