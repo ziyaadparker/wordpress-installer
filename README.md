@@ -1,7 +1,6 @@
-WordPress Installer
-===================
+# WordPress Installer
 
-An automation tool, built MAMP, WAMP and XAMP.
+An automation tool, built for MAMP, WAMP and XAMP.
 
 #### What's the difference?
 
@@ -14,9 +13,9 @@ What was normally a mundane task which consisted of the following:
 
 You now do this from once screen, and you're redirected to the actual installation. From one page, you can:
 
-  - Either download the latest or nightly build
+  - Either download the latest or nightly build of WordPress
   - Connect to or create a new database
-  - And, you're redirected to the installation
+  - And, you're redirected to the installation... simple!
 
 # Getting Started
 
@@ -26,32 +25,44 @@ It's pretty simple.
 
   - Download WordPress Installer
   - Put the folder within your root directory of your local server:
-    - *MAMP* ```mamp\htdocs\```
-    - *WAMP* ```wamp\www\```
-    - *XAMP* ```xamp\htdocs```
+    - ```mamp\htdocs\```
+    - ```wamp\www\```
+    - ```xamp\htdocs\```
   - Simply browse to the folder, something like:
-    - *MAMP* ```http://localhost:8888/wordpress-installer```
-    - *WAMP* ```http://localhost:8080/wordpress-installer```
-    - *XAMP* ```http://localhost:8080/wordpress-installer```
+    - ```http://localhost:8888/wordpress-installer```
+    - ```http://localhost:8080/wordpress-installer```
 
 #### Setup Wizard
 
 This is really self explanatory:
 
-  - Installation type:
-    - You can either choose latest build which is the latest stable version, or the nightly build which is the latest beta build. **This goes without saying, you need to be connected to the internet**.
-  - Create folder:
-    - This folder will be created within your local server's root directory. So you can browse to it, the same way you browse to WordPress Installer, except with the folder name replacing "wordpress-installer".
-  - Create database:
-    - This database will be created within phpMyAdmin with your local server set credentials.
-  - Database server:
-    - More often than not, this can stay "localhost".
-  - Database user:
-    - As said above, this will be your local server set user name, in most cases it's something like "root".
-  - Database password:
-    - The same applies here, in most cases it's something like "root" or "" (blank).
-  - Table prefix:
-    - This will prefix each table in the database, by default WordPress' table prefix is "wp_".
+  - **Installation type:**
+  
+  *You can either choose latest build which is the latest stable version, or the nightly build which is the latest beta build. This goes without saying, you need to be connected to the internet.*
+
+  - **Create folder:**
+  
+  *This folder will be created within your local server's root directory. So you can browse to it, the same way you browse to WordPress Installer, except with the folder name replacing "wordpress-installer".*
+
+  - **Create database:**
+  
+  *This database will be created within phpMyAdmin with your local server set credentials.*
+
+  - **Database server:**
+
+  *More often than not, this can stay "localhost".*
+
+  - **Database user:**
+  
+  *As said above, this will be your local server set user name, in most cases it's something like "root".*
+
+  - **Database password:**
+  
+  *The same applies here, in most cases it's something like "root" or "" (blank).*
+
+  - **Table prefix:**
+  
+  *This will prefix each table in the database, by default WordPress' table prefix is "wp_".*
 
 # Development
 
@@ -60,10 +71,6 @@ Want to contribute? Awesome! You can fork the repo and simply submit pull reques
 #### Got an idea, or a fix?
 
 You can contact me with any ideas or suggestions you have here. Also, like any other repo, you can report issues as you get them. Be nice!
-
-#### Todo's
-
-There's none yet but there sure will be!
 
 # Licensing
 
