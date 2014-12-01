@@ -26,9 +26,11 @@ if( empty( $_POST['database_user'] ) ){
     $errors['6_database_user'] = '<strong>Database User:</strong> A database user is required.';
 }
 
-if( empty( $_POST['database_pass'] ) ){
-    $errors['7_database_pass'] = '<strong>Database Password:</strong> A database password is required.';
-}
+// Allow blank password
+
+// if( empty( $_POST['database_pass'] ) ){
+//     $errors['7_database_pass'] = '<strong>Database Password:</strong> A database password is required.';
+// }
 
 if( !empty( $_POST['database_host'] ) && !empty( $_POST['database_user'] ) && !empty( $_POST['database_pass'] ) ){
     $link = false;

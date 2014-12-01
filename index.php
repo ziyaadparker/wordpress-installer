@@ -15,15 +15,15 @@
     require_once 'layout/header.php';
 
     /**
-     * Check if cURL is installed
+     * Check PHP Version
      */
-    if ( version_compare( PHP_VERSION, '5.3.0', '<' ) ){
+    if ( version_compare( PHP_VERSION, '5.4.0', '<' ) ){
         echo '<section class="container">';
             echo '<div class="row">';
                 echo '<div class="col-md-6 col-md-offset-3">';
                     echo '<div class="callout callout-warning" role="alert">';
                         echo '<h4>PHP Warning!</h4>';
-                        echo '<p>You require at least PHP 5.3.0 in order to get the full functionality of this automation. Simply, update to the latest version of <a href="http://www.wampserver.com/en/" target="_blank">WAMP</a>, <a href="http://www.mamp.info/en/" target="_blank">MAMP</a> or <a href="https://www.apachefriends.org/index.html" target="_blank">XAMP</a>.</p>';
+                        echo '<p>You require at least PHP 5.4.0 in order to get the full functionality of this automation. Simply, update to the latest version of <a href="http://www.wampserver.com/en/" target="_blank">WAMP</a>, <a href="http://www.mamp.info/en/" target="_blank">MAMP</a> or <a href="https://www.apachefriends.org/index.html" target="_blank">XAMP</a>.</p>';
                     echo '</div>';
                 echo '</div>';
             echo '</div>';

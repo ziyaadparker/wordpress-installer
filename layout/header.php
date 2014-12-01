@@ -26,22 +26,55 @@
 </head>
 <body ng-app="automate">
     
+    <?php
+
+        $update_available = false;
+        if( version_compare( PHP_VERSION, '5.4.0', '>' ) ){
+
+            $args = array(
+                'http' => array(
+                    'method' => "GET",
+                    'header' => "User-Agent: wi"
+                )
+            );
+            $context = stream_context_create( $args );
+            $current_commits = file_get_contents( "https://api.github.com/repos/iammathews/wordpress-installer/commits", false, $context );
+
+            if( $current_commits ){
+                $commits = json_decode( $current_commits );
+
+                $current_commit_minus1 = $commits[1]->sha;
+                $ref_commit = "c04780260a18ccf59714ec7a1c1b61fd95f7dc6d";
+
+                if( !strcmp( $current_commit_minus1, $ref_commit ) )
+                    $update_available = true;
+            }
+
+        }
+    
+    ?>
+    
     <header>
 
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <span class="navbar-brand">WordPress Installer</span>
-                    <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                            <span class="sr-only">Toggle navigation</span>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
-                    </button> -->
+                    </button>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="nav navbar-nav navbar-right">
                         <!-- <li><a href="#" target="_blank">Getting Started</a></li> -->
+                        <?php
+
+                            if( $update_available )
+                                echo '<li><a href="https://github.com/iammathews/wordpress-installer" target="_blank"><span class="badge">Update Available</span></a></li>';
+
+                        ?>
                     </ul>
                 </div>
             </div>
