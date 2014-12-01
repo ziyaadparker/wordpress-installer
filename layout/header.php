@@ -33,20 +33,20 @@
 
             $args = array(
                 'http' => array(
-                    'method' => "GET",
-                    'header' => "User-Agent: wi"
+                    'method' => 'GET',
+                    'header' => 'User-Agent: wi'
                 )
             );
             $context = stream_context_create( $args );
-            $current_commits = file_get_contents( "https://api.github.com/repos/iammathews/wordpress-installer/commits", false, $context );
+            $current_commits = file_get_contents( 'https://api.github.com/repos/iammathews/wordpress-installer/commits', false, $context );
 
             if( $current_commits ){
                 $commits = json_decode( $current_commits );
 
                 $current_commit_minus1 = $commits[1]->sha;
-                $ref_commit = "c04780260a18ccf59714ec7a1c1b61fd95f7dc6d";
+                $ref_commit = 'e315126730acb2f7e95ca3bd3b08951c9e191df8';
 
-                if( !strcmp( $current_commit_minus1, $ref_commit ) )
+                if( strcmp( $current_commit_minus1, $ref_commit ) )
                     $update_available = true;
             }
 

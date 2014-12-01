@@ -19,7 +19,7 @@ You now do this from once screen, and you're redirected to the actual installati
 
 # Getting Started
 
-PHP verion 5.3 or greater is required, other than that it's pretty simple.
+PHP verion 5.4 or greater is required, other than that it's pretty simple.
 
 #### Installation
 
@@ -29,8 +29,9 @@ PHP verion 5.3 or greater is required, other than that it's pretty simple.
     - ```wamp\www\```
     - ```xamp\htdocs\```
   - Simply browse to the folder, something like:
-    - ```http://localhost:8888/wordpress-installer```
+    - ```http://localhost/wordpress-installer```
     - ```http://localhost:8080/wordpress-installer```
+    - ```http://localhost:8888/wordpress-installer```
 
 # Usage
 
@@ -74,7 +75,7 @@ You can contact me with any ideas or suggestions you have here. Also, like any o
 
 # Licensing
 
-This is a personal project, which is licensed under the [GNU v2] license. Feel free to use it however you like, and you don't need to credit me if you don't want to! But you can say thanks, buy me [Nespresso Capsules] :)
+This is a personal project, which is licensed under the [GNU v2] license. Feel free to use it however you like, and you don't need to credit me if you don't want to! But you can say thanks by buying me [Nespresso Capsules] :)
 
 [GNU v2]:http://www.gnu.org/licenses/gpl-2.0.html
 [Nespresso Capsules]:http://yusrimathews.co.za/donate/?project=wordpress-installer

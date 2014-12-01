@@ -1,11 +1,13 @@
 <?php
 /**
  * WordPress Installer
+ * An automation tool, built for MAMP, WAMP and XAMP.
  *
  * @package     WordPress Installer
+ * @version     0.2
  * @author      Yusri Mathews <yo@yusrimathews.co.za>
  * @license     GPL-2.0+
- * @link        https://bitbucket.org/yusrimathews/automate-wordpress-install
+ * @link        https://github.com/iammathews/wordpress-installer
  * @copyright   2014 Yusri Mathews
  */
 ?>
@@ -36,6 +38,14 @@
 
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
+                
+                <?php
+                
+                    $connected = @fsockopen( 'yusrimathews.co.za', 80 );
+                    if ( !$connected )
+                        echo '<div class="alert alert-info" role="alert"><strong>Woah!</strong> You\'re not connected to the internet.</div>';
+        
+                ?>
 
                 <div class="alert alert-warning" role="alert" ng-show="warningAlert" ng-bind-html="warningAlert"></div>
                 <div class="alert alert-danger" role="alert" ng-show="errorAlert">
@@ -55,7 +65,7 @@
                             <div class="form-group">
                                 <label class="col-md-5 control-label" for="installation_type">Installation Type</label>
                                 <div class="col-md-7">
-                                    <select class="form-control" id="installation_type" name="installation_type" ng-model="formData.installation_type" ng-options="option.id as option.label for option in form.options" ng-class="{ 'ng-dirty' : errorAlert.1_installation_type }" required></select>
+                                    <select class="form-control" id="installation_type" name="installation_type" ng-model="formData.installation_type" ng-options="option.id as option.label for option in form.options" ng-class="{ 'has-error' : errorAlert.1_installation_type }" required></select>
                                 </div>
                             </div>
                             <div class="form-group">

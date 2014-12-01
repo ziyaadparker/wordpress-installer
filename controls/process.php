@@ -4,13 +4,17 @@ $data       = array();
 $errors     = array();
 $dberrors   = array();
 
+$connected = @fsockopen( 'yusrimathews.co.za', 80 );
+
 if( empty($_POST['installation_type']) || $_POST['installation_type'] == '' ){
     $errors['1_installation_type'] = '<strong>Installation Type:</strong> An installation type is required.';
+} elseif( $connected ){
+    $errors['1_installation_type'] = '<strong>Installation Type:</strong> An internet connection is required.';
 }
 
 if( empty( $_POST['create_folder'] ) ){
     $errors['3_create_folder'] = '<strong>Create Folder:</strong> You need to create a folder.';
-} elseif( file_exists( '../../' . $_POST['create_folder'] ) ) {
+} elseif( file_exists( '../../' . $_POST['create_folder'] ) ){
     $errors['3_create_folder_exists'] = '<strong>Create Folder:</strong> A folder named "' . $_POST['create_folder'] . '" already exists.';
 }
 
@@ -25,8 +29,6 @@ if( empty( $_POST['database_name'] ) ){
 if( empty( $_POST['database_user'] ) ){
     $errors['6_database_user'] = '<strong>Database User:</strong> A database user is required.';
 }
-
-// Allow blank password
 
 // if( empty( $_POST['database_pass'] ) ){
 //     $errors['7_database_pass'] = '<strong>Database Password:</strong> A database password is required.';
