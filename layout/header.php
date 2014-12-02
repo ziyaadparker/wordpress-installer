@@ -44,7 +44,7 @@
                 $commits = json_decode( $current_commits );
 
                 $current_commit_minus1 = $commits[1]->sha;
-                $ref_commit = 'e315126730acb2f7e95ca3bd3b08951c9e191df8';
+                $ref_commit = 'f63f3e930c1facb4ff6078051c6ec6c41c421fce';
 
                 if( strcmp( $current_commit_minus1, $ref_commit ) )
                     $update_available = true;
