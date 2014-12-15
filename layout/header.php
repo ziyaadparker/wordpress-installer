@@ -44,7 +44,7 @@
                 $commits = json_decode( $current_commits );
 
                 $current_commit_minus1 = $commits[1]->sha;
-                $ref_commit = 'f63f3e930c1facb4ff6078051c6ec6c41c421fce';
+                $ref_commit = 'dd28f8f06e629310d3e164133b3c58e2c4a59211';
 
                 if( strcmp( $current_commit_minus1, $ref_commit ) )
                     $update_available = true;
@@ -61,14 +61,14 @@
                 <div class="navbar-header">
                     <span class="navbar-brand">WordPress Installer</span>
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="main-nav">
                     <ul class="nav navbar-nav navbar-right">
-                        <!-- <li><a href="#" target="_blank">Getting Started</a></li> -->
+                        <li><a href="https://github.com/iammathews/wordpress-installer" target="_blank">Getting Started</a></li>
                         <?php
 
                             if( $update_available )
