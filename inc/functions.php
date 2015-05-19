@@ -1,8 +1,6 @@
 <?php
 
-/**
- * Download file
- */
+// Download file
 function wi_download( $remote_url, $local_file ){
 
     $content = file_get_contents( $remote_url );
@@ -11,9 +9,7 @@ function wi_download( $remote_url, $local_file ){
 
 }
 
-/**
- * Extract zip
- */
+// Extract zip
 function wi_extract( $zip_file, $folder ){
 
     $zip = new ZipArchive();
@@ -27,9 +23,7 @@ function wi_extract( $zip_file, $folder ){
 
 }
 
-/**
- * Create database
- */
+// Create database
 function wi_create_db( $server, $db_name, $user, $pass ){
     
     $link = @mysqli_connect( $server, $user, $pass );
@@ -42,9 +36,7 @@ function wi_create_db( $server, $db_name, $user, $pass ){
 
 }
 
-/**
- * Create config
- */
+// Create config
 function wi_create_config( $db_host, $db_name, $db_user, $db_pass, $table_prefix, $folder ){
 
     $config_sample = file_get_contents( '../../' . $folder . '/wp-config-sample.php' );
@@ -68,5 +60,3 @@ function wi_create_config( $db_host, $db_name, $db_user, $db_pass, $table_prefix
     return true;
 
 }
-
-?>

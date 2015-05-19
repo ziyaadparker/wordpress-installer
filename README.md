@@ -78,4 +78,4 @@ You can contact me with any ideas or suggestions you have here. Also, like any o
 This is a personal project, which is licensed under the [GNU v2] license. Feel free to use it however you like, and you don't need to credit me if you don't want to! But you can say thanks by buying me [Nespresso Capsules] :)
 
 [GNU v2]:http://www.gnu.org/licenses/gpl-2.0.html
-[Nespresso Capsules]:http://yusrimathews.co.za/donate/?project=wordpress-installer
+[Nespresso Capsules]:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=yusrimathews%40gmail%2ecom&lc=ZA&item_name=Yusri%20Mathews&item_number=wordpress%2dinstaller&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted

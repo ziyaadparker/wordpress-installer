@@ -26,7 +26,7 @@
         $scope.processForm = function(){
             $http({
                 method  : 'POST',
-                url     : 'controls/process.php',
+                url     : 'inc/process.php',
                 data    : $.param($scope.formData),
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
             })
@@ -50,7 +50,7 @@
         $scope.runInstaller = function(){
             $http({
                 method  : 'POST',
-                url     : 'controls/installer.php',
+                url     : 'inc/installer.php',
                 data    : $.param($scope.formData),
                 headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
             })

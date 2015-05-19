@@ -1,25 +1,8 @@
 <?php
-/**
- * WordPress Installer
- * An automation tool, built for MAMP, WAMP and XAMP.
- *
- * @package     WordPress Installer
- * @version     0.2
- * @author      Yusri Mathews <yo@yusrimathews.co.za>
- * @license     GPL-2.0+
- * @link        https://github.com/iammathews/wordpress-installer
- * @copyright   2014 Yusri Mathews
- */
-?>
 
-<?php
+    include_once('inc/header.php');
 
-    require_once 'layout/header.php';
-
-    /**
-     * Check PHP Version
-     */
-    if ( version_compare( PHP_VERSION, '5.4.0', '<' ) ){
+    if( version_compare( PHP_VERSION, '5.4.0', '<' ) ){
         echo '<section class="container">';
             echo '<div class="row">';
                 echo '<div class="col-md-6 col-md-offset-3">';
@@ -35,15 +18,14 @@
 ?>
 
     <section class="container" ng-controller="FormController as form">
-
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
-                
                 <?php
                 
-                    $connected = @fsockopen( 'yusrimathews.co.za', 80 );
-                    if ( !$connected )
+                    $connected = @fsockopen('yusrimathews.co.za', 80);
+                    if( !$connected ){
                         echo '<div class="alert alert-info" role="alert"><strong>Woah!</strong> You\'re not connected to the internet.</div>';
+                    }
         
                 ?>
 
@@ -56,7 +38,6 @@
                 <div class="alert alert-danger" role="alert" ng-show="DBerrorAlert" ng-bind-html="DBerrorAlert.message"></div>
 
                 <div id="installation_wizard" ng-hide="setupProcess">
-
                     <div class="page-header">
                         <h4>Setup Wizard</h4>
                     </div>
@@ -120,11 +101,9 @@
                             </div>
                         </fieldset>
                     </form>
-
                 </div>
 
                 <div id="installation_process" ng-show="setupProcess">
-
                     <div class="callout callout-info" role="alert" ng-show="isInstalling">
                         <h4>Heads up!</h4>
                         <p>This might take a few minutes depending on your internet speed.</p>
@@ -140,7 +119,6 @@
                     <a class="btn btn-default pull-right" ng-href="{{ projectUrl }}" ng-show="projectUrl">Run Install</a>
 
                     <div class="clearfix"></div>
-
                 </div>
                 <!-- DEBUG FORM INPUT AND VALIDATION -->
 
@@ -151,13 +129,10 @@
                 <!-- END: DEBUG FORM INPUT AND VALIDATION -->
             </div>
         </div>
-
     </section>
 
 <?php
 
     }
 
-    require_once 'layout/footer.php';
-
-?>
+    include_once('inc/footer.php');

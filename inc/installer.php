@@ -8,11 +8,9 @@ $done_zip = false;
 $db_created = false;
 $config_created = false;
 
-include_once 'functions.php';
+include_once('functions.php');
 
-/**
- * Download file
- */
+// Download file
 if( isset( $_POST['installation_type'] ) && $_POST['installation_type'] == 0 || $_POST['installation_type'] == 1 ){
 
     $download_ok = wi_download( $_POST['installation_type'], 'latest.zip' );
@@ -26,9 +24,7 @@ if( isset( $_POST['installation_type'] ) && $_POST['installation_type'] == 0 || 
 
 }
 
-/**
- * Extract zip
- */
+// Extract zip
 if( $download_ok ){
 
     $done_zip = wi_extract( 'latest.zip', $_POST['create_folder'] );
@@ -42,9 +38,7 @@ if( $download_ok ){
 
 }
 
-/**
- * Create database
- */
+// Create database
 if( isset( $_POST['create_database'] ) && $_POST['create_database'] == 'true' ){
 
     $db_created = wi_create_db( $_POST['database_host'], $_POST['database_name'], $_POST['database_user'], $_POST['database_pass'] );
@@ -58,9 +52,7 @@ if( isset( $_POST['create_database'] ) && $_POST['create_database'] == 'true' ){
 
 }
 
-/**
- * Create config
- */
+// Create config
 if( $download_ok && $done_zip ){
 
     $config_created = wi_create_config( $_POST['database_host'], $_POST['database_name'], $_POST['database_user'], $_POST['database_pass'], $_POST['table_prefix'], $_POST['create_folder'] );
@@ -79,15 +71,9 @@ if( $download_ok && $done_zip ){
 
 $processData['results'] = $processResults;
 
-/**
- * Return URL
- */
+// Return URL
 if( $config_created ){
-
     $processData['projectUrl'] = 'http://' . $_SERVER['SERVER_NAME'] . '/' . $_POST['create_folder'];
-
 }
 
 echo json_encode( $processData );
-
-?>
